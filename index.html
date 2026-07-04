@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en" data-language="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YOUR NAME | Personal Homepage</title>
-  <meta name="description" content="Personal academic homepage for YOUR NAME.">
+  <title>Jiyun Chen | Personal Homepage</title>
+  <meta name="description" content="Personal academic homepage for Jiyun Chen, a master's student in Artificial Intelligence at Guangzhou University.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body id="top">
@@ -12,33 +12,45 @@
 
   <div class="page-shell">
     <header class="profile-header">
-      <img class="profile-photo" src="assets/profile-placeholder.svg" alt="YOUR NAME profile photo">
+      <img class="profile-photo" src="assets/profile.png" alt="Jiyun Chen profile photo">
 
       <div class="profile-main">
-        <p class="eyebrow">Personal Homepage</p>
-        <h1>YOUR NAME <span class="native-name">中文名</span></h1>
+        <div class="header-tools" aria-label="Page tools">
+          <p class="eyebrow">Personal Homepage</p>
+          <div class="language-toggle" role="group" aria-label="Language">
+            <button class="language-button active" type="button" data-set-lang="en" aria-pressed="true">EN</button>
+            <button class="language-button" type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+          </div>
+        </div>
+
+        <h1>Jiyun Chen <span class="native-name">陈继昀</span></h1>
         <p class="current-role">
-          YOUR CURRENT ROLE, YOUR SCHOOL / ORGANIZATION
+          <span data-lang="en">Master's Student in Artificial Intelligence, School of Cyberspace Security, Guangzhou University</span>
+          <span data-lang="zh">广州大学网络空间安全学院人工智能专业硕士研究生</span>
         </p>
         <p class="short-bio">
-          一句话介绍你的研究方向、技术兴趣或职业目标。建议控制在 1-2 句内，例如：I am interested in artificial intelligence, data systems, and trustworthy machine learning.
+          <span data-lang="en">I focus on AI application development, interpretability mechanisms for large language models, and large language model safety.</span>
+          <span data-lang="zh">关注 AI 应用开发、大模型机制可解释性与大模型安全。</span>
         </p>
 
         <nav class="quick-nav" aria-label="Homepage sections">
-          <a href="#biography">Biography</a>
-          <a href="#competitions">Competitions</a>
-          <a href="#publications">Publications</a>
-          <a href="#internships">Internships</a>
+          <a href="#biography"><span data-lang="en">Biography</span><span data-lang="zh">个人简介</span></a>
+          <a href="#research"><span data-lang="en">Research</span><span data-lang="zh">研究兴趣</span></a>
+          <a href="#competitions"><span data-lang="en">Competitions</span><span data-lang="zh">比赛经历</span></a>
+          <a href="#publications"><span data-lang="en">Publications</span><span data-lang="zh">论文</span></a>
+          <a href="#internships"><span data-lang="en">Internships</span><span data-lang="zh">实习经历</span></a>
+          <a href="#projects"><span data-lang="en">Projects</span><span data-lang="zh">项目</span></a>
         </nav>
 
         <div class="contact-line" aria-label="Contact links">
-          <a href="mailto:your.email@example.com">your.email@example.com</a>
-          <span>/</span>
-          <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">GitHub</a>
-          <span>/</span>
-          <a href="https://scholar.google.com/" target="_blank" rel="noreferrer">Google Scholar</a>
-          <span>/</span>
-          <a href="assets/cv.pdf" target="_blank" rel="noreferrer">CV</a>
+          <a href="mailto:1759047256@qq.com">1759047256@qq.com</a>
+          <span class="separator">/</span>
+          <a href="https://github.com/terra901" target="_blank" rel="noreferrer">GitHub</a>
+          <span class="separator">/</span>
+          <span class="contact-text">Guangzhou, China</span>
+          <span class="separator">/</span>
+          <span data-lang="en">Advisor: Prof. Jiayin Qi</span>
+          <span data-lang="zh">导师：齐佳音</span>
         </div>
       </div>
     </header>
@@ -47,43 +59,73 @@
       <section class="section" id="biography">
         <div class="section-index">01</div>
         <div class="section-body">
-          <h2>Biography</h2>
-          <p>
-            这里填写你的个人简介。可以写你的学校、专业、年级、导师、研究兴趣、目前正在做的项目，以及你希望别人第一眼了解你的信息。
+          <h2><span data-lang="en">Biography</span><span data-lang="zh">个人简介</span></h2>
+          <p data-lang="en">
+            I am a master's student in Artificial Intelligence at the School of Cyber Security, Guangzhou University, advised by Prof. Jiayin Qi.
           </p>
-          <p>
-            第二段可以补充本科/硕士经历、重要转折、长期兴趣或未来方向。如果你希望主页更正式，可以使用英文；如果主要面向中文读者，也可以改成中文。
+          <p data-lang="en">
+            My current work centers on AI application development, interpretability mechanisms for large language models, and large language model safety. I am interested in practical systems that connect model behavior, security governance, and real-world intelligent applications.
+          </p>
+          <p data-lang="zh">
+            我是广州大学网络空间安全学院人工智能专业硕士研究生，导师为齐佳音老师。
+          </p>
+          <p data-lang="zh">
+            我目前关注 AI 应用开发、大模型机制可解释性与大模型安全，希望围绕模型行为、安全治理与真实场景中的智能应用开展研究和系统开发。
           </p>
         </div>
       </section>
 
-      <section class="section" id="competitions">
+      <section class="section" id="research">
         <div class="section-index">02</div>
         <div class="section-body">
-          <h2>Competitions</h2>
+          <h2><span data-lang="en">Research Interests</span><span data-lang="zh">研究兴趣</span></h2>
+          <div class="interest-grid">
+            <div class="interest-item">
+              <h3><span data-lang="en">AI Application Development</span><span data-lang="zh">AI 应用开发</span></h3>
+              <p data-lang="en">Building usable AI systems and agent-based applications for practical workflows.</p>
+              <p data-lang="zh">面向真实工作流构建可用的 AI 系统和 agent 应用。</p>
+            </div>
+            <div class="interest-item">
+              <h3><span data-lang="en">LLM Interpretability</span><span data-lang="zh">大模型机制可解释性</span></h3>
+              <p data-lang="en">Understanding the mechanisms behind large language model behavior.</p>
+              <p data-lang="zh">理解大语言模型行为背后的机制与可解释线索。</p>
+            </div>
+            <div class="interest-item">
+              <h3><span data-lang="en">LLM Safety</span><span data-lang="zh">大模型安全</span></h3>
+              <p data-lang="en">Studying risks, vulnerabilities, and governance strategies for foundation models.</p>
+              <p data-lang="zh">研究基础模型的风险、脆弱性与安全治理策略。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="competitions">
+        <div class="section-index">03</div>
+        <div class="section-body">
+          <h2><span data-lang="en">Competitions</span><span data-lang="zh">比赛经历</span></h2>
           <ul class="timeline-list">
             <li class="timeline-item">
-              <div class="timeline-date">YEAR</div>
+              <div class="timeline-date">Nov. 2025 - Dec. 2025</div>
               <div class="timeline-content">
-                <h3>Competition Name</h3>
-                <p class="meta">Award / Ranking, Team Role</p>
-                <p>
-                  简短描述比赛内容、你负责的工作、使用的技术、最终结果。建议 1-3 句话。
+                <h3>TGAC Tencent Games Algorithm Competition</h3>
+                <p class="meta">
+                  <span data-lang="en">Second Place, Data Intelligence Decision Science Track</span>
+                  <span data-lang="zh">数智决策科学赛道，第二名</span>
+                </p>
+                <p data-lang="en">
+                  Achieved second place in the Data Intelligence Decision Science track of the Tencent Games Algorithm Competition.
+                </p>
+                <p data-lang="zh">
+                  在腾讯游戏算法大赛 TGAC 数智决策科学赛道获得第二名。
                 </p>
                 <p class="links">
-                  <a href="#" aria-label="Competition project link">Project</a>
-                  <a href="#" aria-label="Competition certificate link">Certificate</a>
+                  <a href="https://github.com/terra901/TAGC-Data-Intelligence-Decision-Science" target="_blank" rel="noreferrer">Code</a>
+                  <a href="assets/tgac-award.png" target="_blank" rel="noreferrer"><span data-lang="en">Award Photo</span><span data-lang="zh">奖项图片</span></a>
                 </p>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <div class="timeline-date">YEAR</div>
-              <div class="timeline-content">
-                <h3>Competition Name</h3>
-                <p class="meta">Award / Ranking, Team Role</p>
-                <p>
-                  如果有多个比赛，复制这一整段 li，并替换成你的真实信息。
-                </p>
+                <figure class="inline-figure">
+                  <img src="assets/tgac-award.png" alt="TGAC 2025 second place trophy">
+                  <figcaption><span data-lang="en">TGAC 2025 second place trophy.</span><span data-lang="zh">TGAC 2025 亚军奖杯。</span></figcaption>
+                </figure>
               </div>
             </li>
           </ul>
@@ -91,38 +133,40 @@
       </section>
 
       <section class="section" id="publications">
-        <div class="section-index">03</div>
+        <div class="section-index">04</div>
         <div class="section-body">
-          <h2>Publications</h2>
+          <h2><span data-lang="en">Publications</span><span data-lang="zh">论文</span></h2>
           <ul class="publication-list">
             <li class="publication-item">
-              <div class="paper-thumb" aria-hidden="true">Paper</div>
+              <div class="paper-thumb" aria-hidden="true">Inscrypt 2025</div>
               <div class="publication-details">
-                <h3>Paper Title</h3>
-                <p class="authors">
-                  <strong>YOUR NAME</strong>, Coauthor Name, Coauthor Name
-                </p>
-                <p class="venue">Conference / Journal Name, YEAR</p>
-                <p class="summary">
-                  用一句话概括论文贡献或研究问题。如果还没有正式发表，可以写 Preprint、Under Review 或 Manuscript。
-                </p>
+                <h3>Revealing the Frailty of Static Benchmarks: The DyNA-IDS Framework for Concept Drift Adaptation in Time-Series Network Intrusion Detection</h3>
+                <p class="authors">Kun Jia, Haizhen Gao, <strong>Jiyun Chen</strong>, and Jiayin Qi</p>
+                <p class="venue">Inscrypt 2025, 21st International Conference, Xi'an, China, Oct. 19-22, 2025, Revised Selected Papers, Part II</p>
                 <p class="links">
-                  <a href="#">PDF</a>
-                  <a href="#">Code</a>
-                  <a href="#">Project Page</a>
+                  <a href="https://link.springer.com/chapter/10.1007/978-981-95-6203-9_18" target="_blank" rel="noreferrer">PDF</a>
                 </p>
               </div>
             </li>
             <li class="publication-item">
-              <div class="paper-thumb" aria-hidden="true">Paper</div>
+              <div class="paper-thumb" aria-hidden="true">TrustCom</div>
               <div class="publication-details">
-                <h3>Paper Title</h3>
-                <p class="authors">
-                  <strong>YOUR NAME</strong>, Coauthor Name
+                <h3>Bias as an Exploit: A Scalable Red-Team Campaign to Uncover Gender-Based Vulnerabilities in Foundational Models</h3>
+                <p class="authors">Kun Jia, <strong>Jiyun Chen</strong>, Haizhen Gao, Yuxin Zhang, Qiushi Dong, and Daixi Zhang</p>
+                <p class="venue">IEEE International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom)</p>
+                <p class="links">
+                  <a href="https://ieeexplore.ieee.org/document/11354830" target="_blank" rel="noreferrer">PDF</a>
                 </p>
-                <p class="venue">Conference / Journal Name, YEAR</p>
-                <p class="summary">
-                  复制这一项来添加更多论文；如果你暂时没有论文，也可以保留本节并写成 Selected Manuscripts / Projects。
+              </div>
+            </li>
+            <li class="publication-item">
+              <div class="paper-thumb" aria-hidden="true">SSCAE 2026</div>
+              <div class="publication-details">
+                <h3>Risk Analysis and Response Strategies of Large Language Models for Security Governance</h3>
+                <p class="authors">Kun Jia, Yuxin Zhang, <strong>Jiyun Chen</strong>, Jiayin Qi, and Binxing Fang</p>
+                <p class="venue">Strategic Study of CAE, 2026, Vol. 28, Issue 2, pp. 97-112. DOI: 10.15302/J-SSCAE-2025.06.016</p>
+                <p class="links">
+                  <a href="https://www.engineering.org.cn/sscae/CN/10.15302/J-SSCAE-2025.06.016" target="_blank" rel="noreferrer">PDF</a>
                 </p>
               </div>
             </li>
@@ -131,27 +175,53 @@
       </section>
 
       <section class="section" id="internships">
-        <div class="section-index">04</div>
+        <div class="section-index">05</div>
         <div class="section-body">
-          <h2>Internships</h2>
+          <h2><span data-lang="en">Internships</span><span data-lang="zh">实习经历</span></h2>
           <ul class="timeline-list">
             <li class="timeline-item">
-              <div class="timeline-date">START - END</div>
+              <div class="timeline-date"><span data-lang="en">May 2026 - Present</span><span data-lang="zh">2026.05 至今</span></div>
               <div class="timeline-content">
-                <h3>Company / Lab Name</h3>
-                <p class="meta">Internship Title, City / Remote</p>
-                <p>
-                  写你在实习中负责的系统、模型、算法、数据、产品或研究任务。尽量强调产出，例如性能提升、上线模块、论文/专利、实验结果。
+                <h3>RASTAR</h3>
+                <p class="meta">
+                  <span data-lang="en">AI Application Development Engineer Intern</span>
+                  <span data-lang="zh">AI 应用开发工程师实习生</span>
                 </p>
+                <p data-lang="en">
+                  Maintain data warehouse workflows, develop a public-opinion monitoring platform, and build data-analysis agents.
+                </p>
+                <p data-lang="zh">
+                  负责维护数仓、开发舆情监控平台，并建设数分 agent。
+                </p>
+                <figure class="inline-figure wide">
+                  <img src="assets/rastar-badge.png" alt="RASTAR internship badge photo">
+                  <figcaption><span data-lang="en">RASTAR internship badge photo.</span><span data-lang="zh">星辉互娱实习工牌照片。</span></figcaption>
+                </figure>
               </div>
             </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-index">06</div>
+        <div class="section-body">
+          <h2><span data-lang="en">Projects</span><span data-lang="zh">项目</span></h2>
+          <ul class="timeline-list">
             <li class="timeline-item">
-              <div class="timeline-date">START - END</div>
+              <div class="timeline-date">Threadline</div>
               <div class="timeline-content">
-                <h3>Company / Lab Name</h3>
-                <p class="meta">Internship Title, City / Remote</p>
-                <p>
-                  复制这一项来添加更多实习经历。
+                <h3>Threadline</h3>
+                <p class="meta"><span data-lang="en">Developer</span><span data-lang="zh">开发者</span></p>
+                <p data-lang="en">
+                  A Chrome extension that saves AI conversation content in real time. It is available on the Chrome Web Store.
+                </p>
+                <p data-lang="zh">
+                  一个实时保存 AI 对话内容的 Chrome 插件，已上传至 Google Chrome 插件商店。
+                </p>
+                <p class="links">
+                  <a href="https://github.com/terra901/Threadline" target="_blank" rel="noreferrer">GitHub</a>
+                  <a href="https://chromewebstore.google.com/detail/threadline/ielloajfhojffpfkjbjfbfgmnlbhhkhi?hl=zh-CN&amp;utm_source=ext_sidebar" target="_blank" rel="noreferrer">Chrome Web Store</a>
                 </p>
               </div>
             </li>
@@ -163,13 +233,32 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p>© <span id="current-year">2026</span> YOUR NAME. All rights reserved.</p>
-      <a href="#top" aria-label="Back to top">Back to top</a>
+      <p>© <span id="current-year">2026</span> Jiyun Chen. All rights reserved.</p>
+      <div class="footer-links">
+        <img class="visitor-badge" src="https://visitor-badge.laobi.icu/badge?page_id=terra901.github.io" alt="Visitor count">
+        <a href="#top" aria-label="Back to top">Back to top</a>
+      </div>
     </div>
   </footer>
 
   <script>
+    const langButtons = document.querySelectorAll('[data-set-lang]');
+
+    function setLanguage(language) {
+      const nextLanguage = language === 'zh' ? 'zh' : 'en';
+      document.documentElement.dataset.language = nextLanguage;
+      document.documentElement.lang = nextLanguage === 'zh' ? 'zh-CN' : 'en';
+      langButtons.forEach((button) => {
+        const isActive = button.dataset.setLang === nextLanguage;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+      });
+      window.localStorage.setItem('homepage-language', nextLanguage);
+    }
+
     document.getElementById('current-year').textContent = new Date().getFullYear();
+    langButtons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.setLang)));
+    setLanguage(window.localStorage.getItem('homepage-language') || 'en');
   </script>
 </body>
 </html>
