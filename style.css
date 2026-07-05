@@ -199,18 +199,8 @@ h1 {
 }
 
 .section {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 36px;
   padding: 42px 0;
   border-bottom: 1px solid var(--hairline);
-}
-
-.section-index {
-  color: var(--accent);
-  font-size: 36px;
-  font-weight: 800;
-  line-height: 1;
 }
 
 .section-body {
@@ -227,27 +217,6 @@ h1 {
 
 .section p {
   color: var(--muted);
-}
-
-.interest-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.interest-item {
-  padding-top: 14px;
-  border-top: 2px solid var(--ink);
-}
-
-.interest-item h3 {
-  margin-bottom: 8px;
-  font-size: 18px;
-  line-height: 1.25;
-}
-
-.interest-item p {
-  margin-bottom: 0;
 }
 
 .timeline-list,
@@ -315,33 +284,9 @@ h1 {
   font-weight: 700;
 }
 
-.inline-figure {
-  width: min(280px, 100%);
-  margin: 18px 0 0;
-}
-
-.inline-figure.wide {
-  width: min(520px, 100%);
-}
-
-.inline-figure img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid var(--hairline);
-  background: var(--surface-muted);
-}
-
-.inline-figure figcaption {
-  margin-top: 7px;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.4;
-}
-
 .publication-item {
   display: grid;
-  grid-template-columns: 220px 1fr;
+  grid-template-columns: 240px 1fr;
   gap: 24px;
   padding: 26px 0;
   border-bottom: 1px solid var(--hairline);
@@ -351,23 +296,9 @@ h1 {
   padding-top: 0;
 }
 
-.paper-thumb {
-  display: grid;
-  min-height: 132px;
-  place-items: center;
-  border: 1px solid var(--hairline);
-  background:
-    linear-gradient(90deg, transparent 23px, rgba(0, 47, 167, 0.16) 24px, transparent 25px),
-    linear-gradient(var(--surface-muted), var(--surface-muted));
-  color: var(--accent);
-  font-size: 14px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
 .publication-image {
   width: 100%;
-  min-height: 132px;
+  height: 168px;
   object-fit: contain;
   border: 1px solid var(--hairline);
   background: var(--surface-muted);
@@ -431,13 +362,7 @@ h1 {
   }
 
   .section {
-    grid-template-columns: 1fr;
-    gap: 12px;
     padding: 34px 0;
-  }
-
-  .section-index {
-    font-size: 24px;
   }
 
   .timeline-item,
@@ -446,13 +371,9 @@ h1 {
     gap: 10px;
   }
 
-  .interest-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .paper-thumb {
-    min-height: 96px;
+  .publication-image {
+    height: auto;
+    max-height: 260px;
   }
 
   .footer-inner {

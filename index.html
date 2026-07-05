@@ -35,7 +35,6 @@
 
         <nav class="quick-nav" aria-label="Homepage sections">
           <a href="#biography"><span data-lang="en">Biography</span><span data-lang="zh">个人简介</span></a>
-          <a href="#research"><span data-lang="en">Research</span><span data-lang="zh">研究兴趣</span></a>
           <a href="#competitions"><span data-lang="en">Competitions</span><span data-lang="zh">比赛经历</span></a>
           <a href="#publications"><span data-lang="en">Publications</span><span data-lang="zh">论文</span></a>
           <a href="#internships"><span data-lang="en">Internships</span><span data-lang="zh">实习经历</span></a>
@@ -57,7 +56,6 @@
 
     <main id="main">
       <section class="section" id="biography">
-        <div class="section-index">01</div>
         <div class="section-body">
           <h2><span data-lang="en">Biography</span><span data-lang="zh">个人简介</span></h2>
           <p data-lang="en">
@@ -75,38 +73,13 @@
         </div>
       </section>
 
-      <section class="section" id="research">
-        <div class="section-index">02</div>
-        <div class="section-body">
-          <h2><span data-lang="en">Research Interests</span><span data-lang="zh">研究兴趣</span></h2>
-          <div class="interest-grid">
-            <div class="interest-item">
-              <h3><span data-lang="en">AI Application Development</span><span data-lang="zh">AI 应用开发</span></h3>
-              <p data-lang="en">Building usable AI systems and agent-based applications for practical workflows.</p>
-              <p data-lang="zh">面向真实工作流构建可用的 AI 系统和 agent 应用。</p>
-            </div>
-            <div class="interest-item">
-              <h3><span data-lang="en">LLM Interpretability</span><span data-lang="zh">大模型机制可解释性</span></h3>
-              <p data-lang="en">Understanding the mechanisms behind large language model behavior.</p>
-              <p data-lang="zh">理解大语言模型行为背后的机制与可解释线索。</p>
-            </div>
-            <div class="interest-item">
-              <h3><span data-lang="en">LLM Safety</span><span data-lang="zh">大模型安全</span></h3>
-              <p data-lang="en">Studying risks, vulnerabilities, and governance strategies for foundation models.</p>
-              <p data-lang="zh">研究基础模型的风险、脆弱性与安全治理策略。</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="section" id="competitions">
-        <div class="section-index">03</div>
         <div class="section-body">
           <h2><span data-lang="en">Competitions</span><span data-lang="zh">比赛经历</span></h2>
-          <ul class="timeline-list">
-            <li class="timeline-item">
-              <div class="timeline-date">Nov. 2025 - Dec. 2025</div>
-              <div class="timeline-content">
+          <ul class="publication-list">
+            <li class="publication-item">
+              <img class="publication-image" src="assets/tgac-award.png" alt="TGAC 2025 second place trophy">
+              <div class="publication-details">
                 <h3>TGAC Tencent Games Algorithm Competition</h3>
                 <p class="meta">
                   <span data-lang="en">Second Place, Data Intelligence Decision Science Track</span>
@@ -120,12 +93,7 @@
                 </p>
                 <p class="links">
                   <a href="https://github.com/terra901/TAGC-Data-Intelligence-Decision-Science" target="_blank" rel="noreferrer">Code</a>
-                  <a href="assets/tgac-award.png" target="_blank" rel="noreferrer"><span data-lang="en">Award Photo</span><span data-lang="zh">奖项图片</span></a>
                 </p>
-                <figure class="inline-figure">
-                  <img src="assets/tgac-award.png" alt="TGAC 2025 second place trophy">
-                  <figcaption><span data-lang="en">TGAC 2025 second place trophy.</span><span data-lang="zh">TGAC 2025 亚军奖杯。</span></figcaption>
-                </figure>
               </div>
             </li>
           </ul>
@@ -133,12 +101,11 @@
       </section>
 
       <section class="section" id="publications">
-        <div class="section-index">04</div>
         <div class="section-body">
           <h2><span data-lang="en">Publications</span><span data-lang="zh">论文</span></h2>
           <ul class="publication-list">
             <li class="publication-item">
-              <div class="paper-thumb" aria-hidden="true">Inscrypt 2025</div>
+              <img class="publication-image" src="assets/image.png" alt="Inscrypt 2025 paper thumbnail">
               <div class="publication-details">
                 <h3>Revealing the Frailty of Static Benchmarks: The DyNA-IDS Framework for Concept Drift Adaptation in Time-Series Network Intrusion Detection</h3>
                 <p class="authors">Kun Jia, Haizhen Gao, <strong>Jiyun Chen</strong>, and Jiayin Qi</p>
@@ -149,7 +116,7 @@
               </div>
             </li>
             <li class="publication-item">
-              <div class="paper-thumb" aria-hidden="true">TrustCom</div>
+              <img class="publication-image" src="assets/263b997270cca322551623f3b1e21858.png" alt="TrustCom paper thumbnail">
               <div class="publication-details">
                 <h3>Bias as an Exploit: A Scalable Red-Team Campaign to Uncover Gender-Based Vulnerabilities in Foundational Models</h3>
                 <p class="authors">Kun Jia, <strong>Jiyun Chen</strong>, Haizhen Gao, Yuxin Zhang, Qiushi Dong, and Daixi Zhang</p>
@@ -160,7 +127,7 @@
               </div>
             </li>
             <li class="publication-item">
-              <div class="paper-thumb" aria-hidden="true">SSCAE 2026</div>
+              <img class="publication-image" src="assets/9a6f93631348c5c9b3ddf92ab87c90f7.png" alt="Strategic Study of CAE paper thumbnail">
               <div class="publication-details">
                 <h3>Risk Analysis and Response Strategies of Large Language Models for Security Governance</h3>
                 <p class="authors">Kun Jia, Yuxin Zhang, <strong>Jiyun Chen</strong>, Jiayin Qi, and Binxing Fang</p>
@@ -175,17 +142,16 @@
       </section>
 
       <section class="section" id="internships">
-        <div class="section-index">05</div>
         <div class="section-body">
           <h2><span data-lang="en">Internships</span><span data-lang="zh">实习经历</span></h2>
-          <ul class="timeline-list">
-            <li class="timeline-item">
-              <div class="timeline-date"><span data-lang="en">May 2026 - Present</span><span data-lang="zh">2026.05 至今</span></div>
-              <div class="timeline-content">
+          <ul class="publication-list">
+            <li class="publication-item">
+              <img class="publication-image" src="assets/rastar-badge.png" alt="RASTAR internship badge photo">
+              <div class="publication-details">
                 <h3>RASTAR</h3>
                 <p class="meta">
-                  <span data-lang="en">AI Application Development Engineer Intern</span>
-                  <span data-lang="zh">AI 应用开发工程师实习生</span>
+                  <span data-lang="en">AI Application Development Engineer Intern, May 2026 - Present</span>
+                  <span data-lang="zh">AI 应用开发工程师实习生，2026.05 至今</span>
                 </p>
                 <p data-lang="en">
                   Maintain data warehouse workflows, develop a public-opinion monitoring platform, and build data-analysis agents.
@@ -193,10 +159,6 @@
                 <p data-lang="zh">
                   负责维护数仓、开发舆情监控平台，并建设数分 agent。
                 </p>
-                <figure class="inline-figure wide">
-                  <img src="assets/rastar-badge.png" alt="RASTAR internship badge photo">
-                  <figcaption><span data-lang="en">RASTAR internship badge photo.</span><span data-lang="zh">星辉互娱实习工牌照片。</span></figcaption>
-                </figure>
               </div>
             </li>
           </ul>
@@ -204,7 +166,6 @@
       </section>
 
       <section class="section" id="projects">
-        <div class="section-index">06</div>
         <div class="section-body">
           <h2><span data-lang="en">Projects</span><span data-lang="zh">项目</span></h2>
           <ul class="timeline-list">
