@@ -12,7 +12,7 @@
 
   <div class="page-shell">
     <header class="profile-header">
-      <img class="profile-photo" src="assets/profile.png" alt="Jiyun Chen profile photo">
+      <img class="profile-photo" src="assets/profile-thumb.png" alt="Jiyun Chen profile photo" decoding="async" fetchpriority="high">
 
       <div class="profile-main">
         <div class="header-tools" aria-label="Page tools">
@@ -78,7 +78,7 @@
           <h2><span data-lang="en">Competitions</span><span data-lang="zh">比赛经历</span></h2>
           <ul class="publication-list">
             <li class="publication-item">
-              <img class="publication-image" src="assets/tgac-award.png" alt="TGAC 2025 second place trophy">
+              <img class="publication-image" src="assets/tgac-award-thumb.png" data-full="assets/tgac-award.png" alt="TGAC 2025 second place trophy" loading="lazy" decoding="async">
               <div class="publication-details">
                 <h3>TGAC Tencent Games Algorithm Competition</h3>
                 <p class="meta">
@@ -105,7 +105,7 @@
           <h2><span data-lang="en">Publications</span><span data-lang="zh">论文</span></h2>
           <ul class="publication-list">
             <li class="publication-item">
-              <img class="publication-image" src="assets/image.png" alt="Inscrypt 2025 paper thumbnail">
+              <img class="publication-image" src="assets/inscrypt-thumb.png" data-full="assets/image.png" alt="Inscrypt 2025 paper thumbnail" loading="lazy" decoding="async">
               <div class="publication-details">
                 <h3>Revealing the Frailty of Static Benchmarks: The DyNA-IDS Framework for Concept Drift Adaptation in Time-Series Network Intrusion Detection</h3>
                 <p class="authors">Kun Jia, Haizhen Gao, <strong>Jiyun Chen</strong>, and Jiayin Qi</p>
@@ -116,7 +116,7 @@
               </div>
             </li>
             <li class="publication-item">
-              <img class="publication-image" src="assets/263b997270cca322551623f3b1e21858.png" alt="TrustCom paper thumbnail">
+              <img class="publication-image" src="assets/trustcom-thumb.png" data-full="assets/263b997270cca322551623f3b1e21858.png" alt="TrustCom paper thumbnail" loading="lazy" decoding="async">
               <div class="publication-details">
                 <h3>Bias as an Exploit: A Scalable Red-Team Campaign to Uncover Gender-Based Vulnerabilities in Foundational Models</h3>
                 <p class="authors">Kun Jia, <strong>Jiyun Chen</strong>, Haizhen Gao, Yuxin Zhang, Qiushi Dong, and Daixi Zhang</p>
@@ -127,7 +127,7 @@
               </div>
             </li>
             <li class="publication-item">
-              <img class="publication-image" src="assets/9a6f93631348c5c9b3ddf92ab87c90f7.png" alt="Strategic Study of CAE paper thumbnail">
+              <img class="publication-image" src="assets/engineering-thumb.png" data-full="assets/9a6f93631348c5c9b3ddf92ab87c90f7.png" alt="Strategic Study of CAE paper thumbnail" loading="lazy" decoding="async">
               <div class="publication-details">
                 <h3>Risk Analysis and Response Strategies of Large Language Models for Security Governance</h3>
                 <p class="authors">Kun Jia, Yuxin Zhang, <strong>Jiyun Chen</strong>, Jiayin Qi, and Binxing Fang</p>
@@ -146,7 +146,7 @@
           <h2><span data-lang="en">Internships</span><span data-lang="zh">实习经历</span></h2>
           <ul class="publication-list">
             <li class="publication-item">
-              <img class="publication-image" src="assets/rastar-badge.png" alt="RASTAR internship badge photo">
+              <img class="publication-image" src="assets/rastar-badge-thumb.png" data-full="assets/rastar-badge.png" alt="RASTAR internship badge photo" loading="lazy" decoding="async">
               <div class="publication-details">
                 <h3>RASTAR</h3>
                 <p class="meta">
@@ -192,6 +192,11 @@
     </main>
   </div>
 
+  <div class="image-lightbox" id="image-lightbox" hidden role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="lightbox-close" type="button">Close</button>
+    <img class="lightbox-image" src="" alt="">
+  </div>
+
   <footer class="site-footer">
     <div class="footer-inner">
       <p>© <span id="current-year">2026</span> Jiyun Chen. All rights reserved.</p>
@@ -204,6 +209,10 @@
 
   <script>
     const langButtons = document.querySelectorAll('[data-set-lang]');
+    const previewImages = document.querySelectorAll('.publication-image');
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImage = lightbox.querySelector('.lightbox-image');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
 
     function setLanguage(language) {
       const nextLanguage = language === 'zh' ? 'zh' : 'en';
@@ -217,8 +226,42 @@
       window.localStorage.setItem('homepage-language', nextLanguage);
     }
 
+    function openLightbox(image) {
+      lightboxImage.src = image.dataset.full || image.currentSrc || image.src;
+      lightboxImage.alt = image.alt;
+      lightbox.hidden = false;
+      document.body.classList.add('lightbox-open');
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.hidden = true;
+      document.body.classList.remove('lightbox-open');
+      lightboxImage.removeAttribute('src');
+      lightboxImage.alt = '';
+    }
+
     document.getElementById('current-year').textContent = new Date().getFullYear();
     langButtons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.setLang)));
+    previewImages.forEach((image) => {
+      image.setAttribute('tabindex', '0');
+      image.setAttribute('role', 'button');
+      image.setAttribute('aria-label', `${image.alt}. Click to enlarge.`);
+      image.addEventListener('click', () => openLightbox(image));
+      image.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openLightbox(image);
+        }
+      });
+    });
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !lightbox.hidden) closeLightbox();
+    });
     setLanguage(window.localStorage.getItem('homepage-language') || 'en');
   </script>
 </body>
