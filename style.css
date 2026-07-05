@@ -263,6 +263,7 @@ h1 {
 
 .meta,
 .authors,
+.author-role,
 .venue {
   margin-bottom: 6px;
 }
@@ -275,6 +276,12 @@ h1 {
 
 .authors {
   font-style: italic;
+}
+
+.author-role {
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .links {
