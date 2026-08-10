@@ -232,7 +232,7 @@ h1 {
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 148px 1fr;
+  grid-template-columns: 240px 1fr;
   gap: 24px;
   padding: 24px 0;
   border-bottom: 1px solid var(--hairline);
@@ -320,6 +320,11 @@ h1 {
 .publication-image:focus {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
+}
+
+.project-image {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
 }
 
 .summary {
