@@ -29,7 +29,7 @@ a:hover { color: #0e3553; text-decoration-thickness: 2px; }
 .skip-link:focus { top: 12px; }
 .page-shell { width: min(900px, calc(100% - 36px)); margin: 0 auto; padding: 32px 0 16px; }
 .profile-header { display: grid; grid-template-columns: 128px 1fr; gap: 28px; align-items: start; padding-bottom: 22px; border-bottom: 2px solid var(--ink); }
-.profile-photo { width: 128px; height: 128px; border-radius: 2px; object-fit: cover; border: 1px solid var(--rule); background: var(--paper-deep); }
+.profile-photo { display: block; width: 128px; height: auto; border-radius: 2px; border: 1px solid var(--rule); background: var(--paper-deep); }
 .profile-main { min-width: 0; }
 .header-tools { display: flex; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 5px; }
 .eyebrow { margin: 0; color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
@@ -84,7 +84,7 @@ h1 { margin-bottom: 7px; color: #111a24; font-size: 44px; font-weight: 700; line
 @media (max-width: 760px) {
   .page-shell { width: min(100% - 28px, 900px); padding-top: 22px; }
   .profile-header { grid-template-columns: 1fr; gap: 12px; }
-  .profile-photo { width: 104px; height: 104px; }
+  .profile-photo { width: 104px; height: auto; }
   .section { padding: 20px 0; }
   .timeline-item, .publication-item { grid-template-columns: 1fr; gap: 9px; padding: 14px 0; }
   .publication-image { width: min(100%, 340px); }
