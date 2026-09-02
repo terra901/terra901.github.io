@@ -43,10 +43,7 @@ h1 { margin-bottom: 7px; color: #111a24; font-size: 44px; font-weight: 700; line
 .native-name { display: inline-block; color: var(--muted); font-family: "Noto Serif CJK SC", "Songti SC", SimSun, serif; font-size: .44em; font-weight: 400; line-height: 1; white-space: nowrap; vertical-align: baseline; }
 .current-role { margin-bottom: 5px; color: var(--ink); font-size: 17px; font-weight: 700; line-height: 1.35; }
 .short-bio { max-width: 680px; margin-bottom: 13px; color: var(--muted); font-size: 15px; }
-.quick-nav { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 16px; padding: 7px 0 6px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-.quick-nav a { color: var(--ink); font-size: 14px; font-weight: 700; text-decoration: none; }
-.quick-nav a:hover { color: var(--accent); text-decoration: underline; }
-.contact-line { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: -8px; color: var(--muted); font-size: 13px; }
+.contact-line { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 8px; margin-top: 0; color: var(--muted); font-size: 13px; }
 
 .section { padding: 14px 0; }
 .section-body { min-width: 0; }
